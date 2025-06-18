@@ -1,0 +1,23 @@
+<!-- public/favicon.svg -->
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- semi-circle arc -->
+  <path
+    d="M2 32a30 30 0 0 1 60 0"
+    stroke="url(#arcGrad)"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <!-- D -->
+  <text x="15" y="45" font-family="Playfair Display, serif" font-size="47" font-weight="700" fill="currentColor" letter-spacing="-2">D</text>
+  <!-- S -->
+  <text x="29" y="59" font-family="Playfair Display, serif" font-size="47" font-weight="700" fill="currentColor" letter-spacing="-6">S</text>
+</svg>
