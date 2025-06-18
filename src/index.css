@@ -27,3 +27,13 @@ section {
   -webkit-scroll-snap-align: start;
 }
 
+.will-change {
+  will-change: transform, opacity;
+}
+
+.gpu-animated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+

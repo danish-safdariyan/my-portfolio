@@ -48,17 +48,17 @@ export default function Projects() {
     >
       {/* ✅ Animated Background Orbs */}
       <motion.div
-        className="absolute top-[10%] left-[5%] w-60 h-60 rounded-full bg-[#a855f7] opacity-50 blur-[100px] z-0"
+        className="will-change absolute top-[10%] left-[5%] w-60 h-60 rounded-full bg-[#a855f7] opacity-50 blur-[100px] z-0"
         animate={{ y: [0, 20, 0], x: [0, -20, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-[40%] right-[10%] w-72 h-72 rounded-full bg-[#6366f1] opacity-40 blur-[120px] z-0"
+        className="will-change absolute top-[40%] right-[10%] w-72 h-72 rounded-full bg-[#6366f1] opacity-40 blur-[120px] z-0"
         animate={{ y: [0, -25, 0], x: [0, 25, 0] }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-[15%] left-[35%] w-80 h-80 rounded-full bg-[#f43f5e] opacity-30 blur-[140px] z-0"
+        className="will-change absolute bottom-[15%] left-[35%] w-80 h-80 rounded-full bg-[#f43f5e] opacity-30 blur-[140px] z-0"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -68,7 +68,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative z-10 text-4xl md:text-5xl font-bold mb-16 text-center"
+        className="will-change relative z-10 text-4xl md:text-5xl font-bold mb-16 text-center"
       >
         Projects
       </motion.h2>
@@ -79,7 +79,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: false, amount: 0.4 }}
-        className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-5xl"
+        className="will-change relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-5xl"
       >
         {projects.map((proj, idx) => (
           <motion.div
@@ -89,7 +89,7 @@ export default function Projects() {
             transition={{ duration: 0.4, delay: idx * 0.1 }}
             whileHover={{ scale: 1.03 }}
             onClick={() => setSelected(proj)}
-            className="cursor-pointer bg-white/5 border border-white/10 p-6 rounded-xl shadow hover:border-accent hover:shadow-xl transition-all"
+            className="will-change cursor-pointer bg-white/5 border border-white/10 p-6 rounded-xl shadow hover:border-accent hover:shadow-xl transition-all"
           >
             <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
             <p className="text-gray-400 text-sm">{proj.description}</p>

@@ -23,7 +23,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: false, amount: 0.4 }}
-        className="relative z-10 w-full max-w-5xl bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-10 shadow-lg"
+        className="will-change relative z-10 w-full max-w-5xl bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-10 shadow-lg"
       >
         {/* Header */}
         <div className="text-center mb-10">
