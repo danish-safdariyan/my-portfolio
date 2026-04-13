@@ -13,7 +13,7 @@ const volunteering = [
       `Program Overview: The "Prepare" program is a preorientation initiative designed to help international
        first-year and transfer undergraduate students transition smoothly to life at Cornell and in the U.S., 
        offering early move-in, mentorship, and resources before the standard new student orientation.`,
-      `Mentor Role: As a mentor, I guided small groups of international students—both virtually and in person—
+      `Mentor Role: As a mentor, I guided small groups of international students (both virtually and in person),
        helping them adjust to college life, navigate campus resources, and foster connections with peers.`,
     ],
   },

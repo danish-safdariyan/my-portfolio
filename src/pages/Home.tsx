@@ -40,7 +40,7 @@ export default function Home() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="will-change text-lg sm:text-xl text-gray-300 max-w-xl mx-auto mb-8"
         >
-          A software/AI/ML engineer who loves solving meaningful problems with code, data, and a bit of curiosity.
+          Software engineer who builds with AI, digs into data, and is genuinely curious about how things work.
         </motion.p>
 
         <motion.a

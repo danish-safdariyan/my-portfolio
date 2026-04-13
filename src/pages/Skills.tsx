@@ -9,6 +9,8 @@ const skills = [
       { name: "PyTorch", level: "Advanced", note: "Deep learning + custom models" },
       { name: "TensorFlow", level: "Proficient", note: "Model building + deployment" },
       { name: "scikit-learn", level: "Advanced", note: "Classical ML, pipelines" },
+      { name: "OpenAI API", level: "Proficient", note: "LLMs, embeddings" },
+      { name: "Prompt Engineering", level: "Proficient", note: "Structured outputs, chaining" },
     ],
   },
   {
@@ -16,17 +18,19 @@ const skills = [
     icon: BadgeCheck,
     list: [
       { name: "Flask", level: "Proficient", note: "APIs, microservices" },
-      { name: "Git/GitHub", level: "Expert", note: "Version control" },
+      { name: "Git/GitHub", level: "Proficient", note: "Version control" },
       { name: "AWS", level: "Beginner", note: "S3, Lambda, CloudWatch" },
+      { name: "FastAPI", level: "Proficient", note: "APIs, async backends" },
     ],
   },
   {
-    category: "Programming Languages",
+    category: "Languages",
     icon: Code2,
     list: [
-      { name: "Python", level: "Expert", note: "ML, web, data" },
+      { name: "Python", level: "Advanced", note: "ML, web, data" },
       { name: "JavaScript", level: "Proficient", note: "Frontend + logic" },
       { name: "Java", level: "Proficient", note: "OOP, backend" },
+      { name: "SQL", level: "Proficient", note: "Queries, data pipelines" },
     ],
   },
 ];
@@ -83,8 +87,8 @@ export default function Skills() {
                 <h3 className="text-lg font-semibold">{section.category}</h3>
               </div>
               <ul className="space-y-4">
-                {section.list.map((item, idx) => (
-                  <li key={idx}>
+                {section.list.map((item) => (
+                  <li key={item.name}>
                     <div className="flex justify-between items-center">
                       <span className="font-medium text-white/90">{item.name}</span>
                       <span className="text-xs text-accent bg-white/10 px-2 py-1 rounded-full">

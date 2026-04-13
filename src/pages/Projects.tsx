@@ -3,13 +3,29 @@ import { motion } from "framer-motion";
 import ProjectModal from "../components/ProjectModal";
 import Wandering_melody from "../assets/Wandering_melody.png";
 
-const placeholderImg = "/trek-thumbnail.jpg";
-
 const projects = [
+  {
+    title: "Sketch-to-3D Scene Generation",
+    description:
+      "End-to-end pipeline from hand-drawn sketches to interactive 3D scenes: a grayscale ResNet-18 classifier on QuickDraw-style data retrieves matching assets, which users place, rotate, and scale in a browser-based viewer.",
+    tags: ["PyTorch", "ResNet-18", "Streamlit", "QuickDraw", "Three.js"],
+    extra:
+      "Trained on roughly 160K sketches (16 curated QuickDraw classes, 10K samples per class) with strong validation accuracy (~88.5%). Streamlit UI uses a drawable canvas for input, shows prediction confidence, and composes multi-object scenes exportable as scene.json. Co-developed with teammates per the repo.",
+    github: "https://github.com/danish-safdariyan/sketch-to-3d",
+  },
+  {
+    title: "Pest Sound Sensor",
+    description:
+      "Low-cost bioacoustic monitoring for orchards: field audio is turned into mel-spectrogram or MFCC features and classified with a CNN (TensorFlow/Keras) to estimate pest activity, supporting spray-when-needed decisions instead of fixed calendar treatments.",
+    tags: ["Python", "TensorFlow", "Keras", "Librosa", "CNN", "Audio ML"],
+    extra:
+      "Ingests WAV files through a small Python pipeline (1024-d embeddings, pre-trained `pest_classifier.keras`), with CLI tools for inference. Framed around BMSB and apple orchards with an economic / ROI story for growers. Cornell Digital Agriculture Hackathon 2026: Most Innovative Idea (team 404 Bugs Not Found).",
+    github: "https://github.com/danish-safdariyan/agtech-hack",
+  },
   {
     title: "WanderingMelody",
     description:
-      "A search engine that takes user inputs—location, age, and genre—then augments them with real-time weather data to deliver music recommendations that feel like a sonic journey through that place.",
+      "A search engine that takes user inputs (location, age, and genre), then augments them with real-time weather data to deliver music recommendations that feel like a sonic journey through that place.",
     tags: ["Python", "Flask", "TF–IDF", "SVD", "VADER"],
     extra:
       "Theme-aware lyric matching with weather & age sentiment filters, popularity-ranked results, and on-page explanations for each recommendation.",
@@ -19,7 +35,7 @@ const projects = [
   {
     title: "Trek Through Infinity",
     description:
-      "A niche, OCaml-powered calendar & task-management app with a clean Bogue GUI. Designed to give users a unified view of dates, events, and to-dos—all in one 35-day grid.",
+      "A niche, OCaml-powered calendar & task-management app with a clean Bogue GUI. Designed to give users a unified view of dates, events, and to-dos, all in one 35-day grid.",
     tags: ["OCaml", "Bogue", "Dune", "OUnit", "YAML"],
     extra:
       "Custom 35-day grid calendar, recurring events, integrated to-do lists, and test-driven design.",

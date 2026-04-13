@@ -3,85 +3,50 @@ import { CalendarDays, MapPin } from "lucide-react";
 
 const experiences = [
   {
+    org: "Cornell Digital Agriculture Hackathon",
+    role: "Most Innovative Idea: Winner",
+    date: "March 2026",
+    location: "Ithaca, NY",
+    points: [
+      "Built a low-cost AI-powered pest detection system using acoustic sensors and CNN-based audio classification to enable event-driven pest detection in real time, reducing reliance on scheduled pesticide spraying.",
+    ],
+  },
+  {
     org: "HODL Talent",
     role: "Software Engineer Intern",
-    date: "Jun 2025 – Present · 1 mo",
+    date: "May 2025 – August 2025",
     location: "Remote",
     points: [
-      "Architected a modular web-scraping framework (Python + Selenium) that ingests thousands of remote-developer openings and exports type-safe JSON for analytics.",
-      "Enhanced title and location parsing for Google Custom Search results—raising data-accuracy rates and reducing manual clean-up time.",
-      "Curated a ranked pipeline of remote PHP-engineer roles, powering HODL Talent’s candidate-matching beta.",
-      "Set up one-click VS Code debug profiles and Pydantic validation, slashing iteration cycles on scraper fixes.",
-      "Prototyped an LLM-driven layer that tags, de-duplicates, and recommends jobs—laying the groundwork for AI-assisted placement at scale."
+      "Built a production-grade Python system aggregating 1,000+ job listings per day, reducing manual data collection by 70% and supporting internal recruiting workflows.",
+      "Designed an LLM-powered pipeline using OpenAI API, embeddings, and Pydantic to extract structured data and match resumes to roles, achieving ~85% agreement with recruiter evaluations.",
+      "Scaled ingestion throughput by 10x through asynchronous scraping, API key rotation, and automated retry logic under rate limits.",
+    ],
+  },
+  {
+    org: "Cornell University, Conference & Event Services",
+    role: "Student Developer",
+    date: "Apr 2024 – Present",
+    location: "Ithaca, NY",
+    points: [
+      "Developed custom event registration forms and web pages using HTML, CSS, and JavaScript in Cvent and WordPress, reducing form completion time by 25% across 100+ university events.",
+      "Built Excel-based reporting dashboards with formulas and pivot tables to aggregate registration data from StarRez, automating manual reporting workflows and enabling real-time event performance tracking.",
     ],
   },
   {
     org: "FinTech at Cornell",
     role: "Student Fellow & Research Assistant",
-    date: "Jan 2025 – Present · 6 mos",
+    date: "Jan 2024 – Present",
     location: "Remote",
     points: [
       "Conducted research at the intersection of AI/ML, finance, and reinforcement-learning optimization.",
-      "Analyzed Chainlink’s business model and explored decentralized oracle mechanisms.",
-      "Explored applications of robust control in corporate finance decision-making.",
+      "Analyzed Chainlink's business model and explored decentralized oracle mechanisms.",
+      "Leveraged big-data and machine-learning techniques for quantitative insights across ongoing FinTech projects.",
     ],
   },
   {
-    org: "FinTech at Cornell",
-    role: "Research Assistant",
-    date: "Jan 2024 – Present · 1 yr 6 mos",
-    location: "Remote",
-    points: [
-      "Collaborated with faculty on financial-technology research within Cornell’s FinTech Initiative.",
-      "Performed data analysis and literature reviews to support ongoing FinTech projects.",
-      "Leveraged big-data and machine-learning techniques for quantitative insights.",
-    ],
-  },
-  {
-    org: "Rewriting the Code",
-    role: "Member",
-    date: "Oct 2024 – Present · 9 mos",
-    location: "Remote",
-    points: [
-      "Active participant in a tech community dedicated to diversity, mentorship, and leadership.",
-    ],
-  },
-  {
-    org: "Cornell University",
-    role: "Student Developer",
-    date: "Apr 2024 – Present · 1 yr 3 mos",
-    location: "Ithaca, NY",
-    points: [
-      "Designed and implemented registration portals and custom apps for Conference & Event Services.",
-      "Enhanced user experience and efficiency—cut processing time by 25%.",
-      "Trained staff on StarRez and internal platforms to ensure smooth adoption.",
-    ],
-  },
-  {
-    org: "Cornell University",
-    role: "Academic Assistant",
-    date: "Jun 2023 – Oct 2024 · 1 yr 5 mos",
-    location: "Ithaca, NY",
-    points: [
-      "Assisted prospective students and parents with admissions inquiries, improving communication workflows.",
-    ],
-  },
-  {
-    org: "Goldman Sachs",
-    role: "Virtual Insight Series Participant",
-    date: "May – Jun 2024 · 2 mos",
-    location: "Remote",
-    points: [
-      "Completed the four-week Virtual Insight Series, exploring Goldman Sachs’ firm culture and business divisions.",
-      "Participated in virtual interactive sessions on Investment Banking, Global Markets, Asset Management, and Engineering.",
-      "Attended workshops on resume-building, interview preparation, and career opportunities at Goldman Sachs.",
-      "Connected with recruiters and affinity group members to expand professional network.",
-    ],
-  },
-  {
-    org: "Millennium",
+    org: "Millennium Management LLC",
     role: "Analyst, FinTech Challenge",
-    date: "Apr 2024 · 1 mo",
+    date: "Apr 2024",
     location: "New York, NY",
     points: [
       "Engineered and back-tested a Python + NumPy trading strategy, outperforming the S&P 500 by 142%.",
@@ -91,11 +56,11 @@ const experiences = [
   {
     org: "Aga Khan Youth and Sports Board",
     role: "Logistics Coordinator",
-    date: "Jan – Jul 2023 · 7 mos",
+    date: "Jan – Jul 2023",
     location: "USA",
     points: [
       "Managed logistics for multi-state youth sports events with 550+ participants.",
-      "Coordinated transportation, lodging, and meals—reducing costs by 20%.",
+      "Coordinated transportation, lodging, and meals, reducing costs by 20%.",
     ],
   },
 ];
@@ -158,7 +123,7 @@ export default function Experiences() {
         <div className="will-change relative before:absolute before:inset-y-0 before:left-6 before:w-[2px] before:bg-white/10 pl-10 space-y-12">
           {experiences.map((exp, i) => (
             <motion.div
-              key={i}
+              key={`${exp.org}-${exp.role}-${exp.date}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
